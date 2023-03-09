@@ -1,0 +1,31 @@
+[global_config]
+[keybindings]
+  broadcast_off = <Alt>o
+  broadcast_group = <Alt>g
+[profiles]
+  [[default]]
+    background_darkness = 0.85
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = TerminessTTF Nerd Font Mono Medium 14
+    foreground_color = "#ffffff"
+    scrollback_lines = 50000
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#3584e4:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    word_chars = "-,./?%&#:_e-0 ="
+    use_system_font = False
+  [[SemTransparencia]]
+    cursor_color = "#aaaaaa"
+    font = TerminessTTF Nerd Font Medium 14
+    foreground_color = "#ffffff"
+    scrollback_lines = 50000
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#1c71d8:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
