@@ -130,6 +130,11 @@ super + {Left,Down,Up,Right}
 alt + ctrl + {Right,Left}
 	bspc desktop -f {next,prev}
 
+# bloquear tela
+
+ctrl + alt + l
+	/usr/bin/xscreensaver-command -lock
+
 # Abrir Firefox
 alt + ctrl + f
 	/usr/bin/firefox
