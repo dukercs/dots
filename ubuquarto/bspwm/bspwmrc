@@ -30,6 +30,8 @@ bspc rule -a Plank layer=above manage=on border=off
 
 /home/dukercs/.local/bin/daily.py --setter feh
 
+/usr/bin/xscreensaver -no-splash &
+
 ~/.config/polybar/launch.sh --hack1bar &
 
 /usr/bin/plank &

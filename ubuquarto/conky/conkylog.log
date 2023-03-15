@@ -1,6 +1,5 @@
-conky: desktop window (800010) is subwindow of root window (561)
+conky: desktop window (a00010) is subwindow of root window (1db)
 conky: window type - desktop
-conky: drawing to created window (0x5a00002)
+conky: drawing to created window (0x4000002)
 conky: drawing to double buffer
-conky: X Error: Display 55c47fe1df30
-
+conky: '/home/dukercs/.config/conky/conky.conf' modified, reloading...
