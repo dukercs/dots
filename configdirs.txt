@@ -4,3 +4,4 @@ polybar
 dunst
 conky
 terminator
+conkypywal

@@ -23,7 +23,7 @@ change_color() {
 
 	* {
 	  al:    #00000000;
-	  bg:    ${BG}FF;
+	  bg:    #${BG##\#aa}FF;
 	  ac:    ${AC}FF;
 	  se:    ${AC}26;
 	  fg:    ${FG}FF;

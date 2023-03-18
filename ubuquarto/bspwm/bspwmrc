@@ -32,6 +32,8 @@ bspc rule -a Plank layer=above manage=on border=off
 
 /usr/bin/xscreensaver -no-splash &
 
+/usr/bin/systemctl start --user dunst &
+
 ~/.config/polybar/launch.sh --hack1bar &
 
 /usr/bin/plank &

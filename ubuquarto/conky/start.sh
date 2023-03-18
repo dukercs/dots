@@ -1,7 +1,7 @@
 #!/bin/bash
 killall conky
 
-sleep 5 
+sleep 2 
 
 /usr/bin/conky > conkylog.log 2>&1 & 
 
