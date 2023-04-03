@@ -28,26 +28,29 @@ bspc rule -a Gnome-calculator state=floating
 bspc rule -a copyq state=floating
 bspc rule -a Plank layer=above manage=on border=off
 
-/home/dukercs/.local/bin/daily.py --setter feh
+${HOME}/.local/bin/daily.py --setter feh
 
 /usr/bin/xscreensaver -no-splash &
 
 /usr/bin/systemctl start --user dunst &
 
-~/.config/polybar/launch.sh --hack1bar &
+${HOME}/.config/limpawal.sh
+
+${HOME}/.config/polybar/launch.sh --hack1bar &
 
 /usr/bin/plank &
 
 /usr/bin/compton &
 
-~/.config/conky/start.sh
+$HOME/.config/conkypywal/start.sh -d &
 
-bash ~/.fehbg &
+bash ${HOME}/.fehbg &
 
 /usr/bin/copyq &
+
 /usr/bin/keepassxc &
 
-bash -x ~/.config/bspwm/trabalho.sh > /tmp/bsplog.trabalho.sh 2>&1
+bash -x ${HOME}/.config/bspwm/trabalho.sh > /tmp/bsplog.trabalho.sh 2>&1
 
 /usr/bin/caffeine-indicator &
 

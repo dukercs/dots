@@ -2,12 +2,25 @@
 # Add this line to your .bashrc or a shell script.
 source "$HOME/.cache/wal/colors.sh"
 
+# Local
+instalacao=$HOME/.config/conkypywal
+
+
+Reinicia(){
+	killall conky
+	sleep 2
+	/usr/bin/conky -c ${instalacao}/conky.conf > ${instalacao}/conkylog.log 2>&1 &
+}
+
 ajuda(){
     saida=$1
     echo "Use:
         $0 -e ou -d
     -e  --esquerda      Coloca o conky do lado esquerdo do monitor
     -d  --esquerda      Coloca o conky do lado direito do monitor
+    -p  --primaria	Pega a cor dos textos primarios (maiores)
+    -s  --secundaria	Pega a cor para os dados (menores)
+    -w  --pywal		Usa o pywal (depreciado)
     -h  --help          Exibe este texto
     "
     exit ${saida:-1}
@@ -50,44 +63,61 @@ inverteCor(){
 mudaLado(){
     if [ "$1" = "d" ]
     then
-      sed -i -e "/alignment/s/'[^']*'/'bottom_right'/" ./conky.conf
+      sed -i -e "/alignment/s/'[^']*'/'top_right'/" ${instalacao}/conky.conf
+      # Apos reinicia
+      Reinicia
     elif [ "$1" = "e" ]
     then
-      sed -i -e "/alignment/s/'[^']*'/'bottom_left'/" ./conky.conf
+      sed -i -e "/alignment/s/'[^']*'/'top_left'/" ${instalacao}/conky.conf
+      # Apos reinicia
+      Reinicia
     fi
 }
 
+pegaCor(){
+	if [ "$1" = "w" ]
+	then
+		# Cores originais do pywal
+		AC_o=$(printf "%s\n" "$color1")
+		BG_o=$(printf "%s\n" "$background")
+		FG_o=$(printf "%s\n" "$foreground")
 
-# CODIGO MAIN
+		# Cores Invertidas 
+		AC=$(inverteCor $AC_o)
+		BG=$(inverteCor $BG_o)
+		FG=$(inverteCor $FG_o)
+		CL=$(echo "0x${FG##\#}")
 
+		sed -i -e "/color1/s/'[^']*'/'${FG}'/" ${instalacao}/conky.conf
+		sed -i -e "/color2/s/'[^']*'/'${BG}'/" ${instalacao}/conky.conf
+		sed -i -e "s/\(destaque\ =\ \)\(.*\)/\1"${CL}"/g" ${instalacao}/conky.lua
+		# Apos reinicia
+		Reinicia
+	elif [ "$1" = "p" ] && [ -n "$2" ]
+	then
+		FG=$2
+		CL=$(echo "0x${FG##\#}")
 
-# Cores originais do pywal
-AC_o=$(printf "%s\n" "$color1")
-BG_o=$(printf "%s\n" "$background")
-FG_o=$(printf "%s\n" "$foreground")
-
-# Cores Invertidas 
-AC=$(inverteCor $AC_o)
-BG=$(inverteCor $BG_o)
-FG=$(inverteCor $FG_o)
-
-
-CL=$(echo "0x${BG##\#}")
-
-sed -i -e "/color1/s/'[^']*'/'${FG_o}'/" ./conky.conf
-sed -i -e "/color2/s/'[^']*'/'${FG_o}'/" ./conky.conf
-sed -i -e "s/\(destaque\ =\ \)\(.*\)/\1"${CL}"/g" ./conky.lua
+		sed -i -e "/color1/s/'[^']*'/'${FG}'/" ${instalacao}/conky.conf
+		sed -i -e "s/\(destaque\ =\ \)\(.*\)/\1"${CL}"/g" ${instalacao}/conky.lua
+		# Apos reinicia
+		Reinicia
+	elif [ "$1" = "s" ] && [ -n "$2" ]
+	then
+		BG=$2
+		sed -i -e "/color2/s/'[^']*'/'${BG}'/" ${instalacao}/conky.conf
+		# Apos reinicia
+		Reinicia
+	fi
+}
 
 case "$1" in
-    -e | --esquerda ) mudaLado e ;;
-    -d | --direita  ) mudaLado d  ;;
-    -h | --help     ) ajuda 0 ;;
-    *               ) ajuda ;;
+    -e | --esquerda   ) mudaLado e ;;
+    -d | --direita    ) mudaLado d  ;;
+    -w | --pywal      ) pegaCor w ;;
+    -p | --primaria   ) pegaCor p $2 ;;
+    -s | --secundaria ) pegaCor s $2 ;;
+    -h | --help       ) ajuda 0 ;;
+    *                 ) ajuda ;;
 esac
 
-
-killall conky
-
-sleep 2
-
-/usr/bin/conky -c ./conky.conf > conkylog.log 2>&1 & 
