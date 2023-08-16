@@ -15,10 +15,9 @@ bspc config focus_follows_pointer true
 
 bspc rule -a Gimp desktop='^5' state=floating follow=on
 bspc rule -a vlc state=floating
+bspc rule -a gcolor3 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a "Microsoft Teams - Preview" desktop='^5'
-bspc rule -a microsoft-edge desktop='^4'
 bspc rule -a Microsoft-edge desktop='^4'
 bspc rule -a Virt-manager desktop='^10'
 bspc rule -a keepassxc state=floating
@@ -27,10 +26,14 @@ bspc rule -a gnome-calculator state=floating
 bspc rule -a Gnome-calculator state=floating
 bspc rule -a copyq state=floating
 bspc rule -a Plank layer=above manage=on border=off
+bspc rule -a Slack desktop='^6'
+bspc config external_rules_command /home/dukercs/.config/bspwm/external_rules
 
-${HOME}/.local/bin/daily.py --setter feh
+${HOME}/.local/bin/daily.py --setter feh &
 
 /usr/bin/xscreensaver -no-splash &
+
+/usr/bin/krunner -d &
 
 /usr/bin/systemctl start --user dunst &
 
@@ -46,11 +49,10 @@ $HOME/.config/conkypywal/start.sh -d &
 
 bash ${HOME}/.fehbg &
 
-/usr/bin/copyq &
-
 /usr/bin/keepassxc &
 
 bash -x ${HOME}/.config/bspwm/trabalho.sh > /tmp/bsplog.trabalho.sh 2>&1
 
 /usr/bin/caffeine-indicator &
 
+/usr/bin/copyq &

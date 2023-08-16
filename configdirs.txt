@@ -1,7 +1,8 @@
 bspwm
-   sxhkd  
+sxhkd  
 polybar
 dunst
 conky
 terminator
 conkypywal
+openbox

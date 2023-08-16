@@ -158,3 +158,11 @@ super + Print
 # Alterna entre divisão horizontal e vertical
 super + v
 	bspc node @parent -R 90
+
+# Virar 90º a direita
+#super + ctrl + Right
+#	/usr/bin/xrandr -o right
+#
+## Voltar ao normal
+#super + ctrl + Up
+#	/usr/bin/xrandr -o normal

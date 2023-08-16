@@ -2,7 +2,7 @@
 semana=$(date +%u)
 hora=$(date +%H)
 #COMANDOS ENTRE ASPAS DUPLAS E SEPARADOS POR ESPACO COLOQUE O CAMINHO COMPLETO OU UM QUE ESTEJA NO SEU PATH
-comandos="/usr/bin/openfortigui /usr/bin/teams /usr/bin/microsoft-edge-stable"
+comandos="/usr/bin/openfortigui /usr/bin/microsoft-edge-stable teams.sh"
 
 
 if [ $semana -le 5 ]

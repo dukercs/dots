@@ -1,0 +1,30 @@
+${HOME}/.local/bin/daily.py --setter feh &
+
+/usr/bin/xscreensaver -no-splash &
+
+/usr/bin/krunner -d &
+
+/usr/bin/systemctl start --user dunst &
+
+${HOME}/.config/limpawal.sh
+
+${HOME}/.config/polybar/launch.sh --colorblocks &
+
+/usr/bin/plank &
+
+/usr/bin/stalonetray &
+
+/usr/bin/compton &
+
+$HOME/.config/conkypywal/start.sh -d &
+
+bash ${HOME}/.fehbg &
+
+/usr/bin/keepassxc &
+
+bash -x ${HOME}/.config/bspwm/trabalho.sh > /tmp/bsplog.trabalho.sh 2>&1
+
+/usr/bin/caffeine-indicator &
+
+/usr/bin/copyq &
+

@@ -1,0 +1,8 @@
+#!/bin/sh
+#notify-send "\$1=$(printf '0x%08X' "$1") \$2=$2 \$3=$3" "$4"
+
+teams=$3
+if [ "$3" = "crx__cifhbcnohmdccbgoicgdjpfamggdegmo" ]
+then
+	echo 'desktop=^5'
+fi

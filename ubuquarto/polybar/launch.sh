@@ -27,6 +27,10 @@ launch_bar() {
 		polybar -l ${LOGLVL:-notice} bottom -c "$dir/$style/config.ini" >> $LOG 2>&1 &
 	elif [[ "$style" == "pwidgets" ]]; then
 		bash "$dir"/pwidgets/launch.sh --main >> $LOG 2>&1
+	elif [[ "$style" == "colorblocksMOD" ]]; then
+		polybar -l ${LOGLVL:-notice} right -c "$dir/$style/config.ini">> $LOG 2>&1 &
+		polybar -l ${LOGLVL:-notice} left -c "$dir/$style/config.ini" >> $LOG 2>&1 &
+
 	else
 		polybar -l ${LOGLVL:-notice} main -c "$dir/$style/config.ini" >> $LOG 2>&1 &	
 	fi
@@ -71,6 +75,10 @@ elif [[ "$1" == "--colorblocks" ]]; then
 	style="colorblocks"
 	launch_bar
 
+elif [[ "$1" == "--colorblocksMOD" ]]; then
+	style="colorblocksMOD"
+	launch_bar
+
 elif [[ "$1" == "--forest" ]]; then
 	style="forest"
 	launch_bar
@@ -91,5 +99,6 @@ else
 	--blocks    --colorblocks    --cuts      --docky
 	--forest    --grayblocks     --hack      --material
 	--panels    --pwidgets       --shades    --shapes
+	--hack1bar  --colorblocksMOD
 	EOF
 fi
