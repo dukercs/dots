@@ -145,7 +145,7 @@ alt + ctrl + e
 
 # Abrir explorador de arquivos (bad habits)
 super + e
-	/usr/bin/nemo $HOME
+	/usr/bin/nautilus $HOME
 
 # Abrir flameshot para print
 Print

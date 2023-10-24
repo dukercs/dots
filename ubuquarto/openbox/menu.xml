@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <openbox_pipe_menu xmlns="http://openbox.org/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/">
-    <menu id="openbox-Office" label="Office" icon="/usr/share/icons/Humanity/categories/24/applications-office.svg">
+    <menu id="exit-menu" label="Exit">
+        <item label="Log Out">
+            <action name="Execute">
+                <command>openbox --exit</command>
+            </action>
+        </item>
+        <item label="Shutdown">
+            <action name="Execute">
+                <command>systemctl poweroff</command>
+            </action>
+        </item>
+        <item label="Restart">
+            <action name="Execute">
+                <command>systemctl reboot</command>
+            </action>
+        </item>
+        <item label="Suspend">
+            <action name="Execute">
+                <command>systemctl suspend</command>
+            </action>
+        </item>
+        <item label="Hibernate">
+            <action name="Execute">
+                <command>systemctl hibernate</command>
+            </action>
+        </item>
+    </menu>
+    <menu id="openbox-Office" label="Office2" icon="/usr/share/icons/Humanity/categories/24/applications-office.svg">
         <item label="KAddressbook import file">
             <action name="Execute">
                 <command><![CDATA[kaddressbook --import]]></command>

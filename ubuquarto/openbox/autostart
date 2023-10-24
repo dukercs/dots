@@ -8,7 +8,7 @@ ${HOME}/.local/bin/daily.py --setter feh &
 
 ${HOME}/.config/limpawal.sh
 
-${HOME}/.config/polybar/launch.sh --colorblocks &
+${HOME}/.config/polybar/launch.sh --colorblocksMOD &
 
 /usr/bin/plank &
 
@@ -22,9 +22,10 @@ bash ${HOME}/.fehbg &
 
 /usr/bin/keepassxc &
 
-bash -x ${HOME}/.config/bspwm/trabalho.sh > /tmp/bsplog.trabalho.sh 2>&1
+#bash -x ${HOME}/.config/bspwm/trabalho.sh > /tmp/bsplog.trabalho.sh 2>&1
 
 /usr/bin/caffeine-indicator &
 
 /usr/bin/copyq &
 
+systemctl --user stop plasma-kglobalaccel.service &

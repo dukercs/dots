@@ -1,25 +1,15 @@
+polybar|notice:  Parsing config file: /home/dukercs/.config/polybar/hack1bar/config.ini
+polybar|notice:  Loaded font "TerminessTTF Nerd Font:pixelsize=10" (name=TerminessTTF Nerd Font, offset=3, file=/home/dukercs/.local/share/fonts/Terminess (TTF) Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "TerminessTTF Nerd Font:pixelsize=12" (name=TerminessTTF Nerd Font, offset=4, file=/home/dukercs/.local/share/fonts/Terminess (TTF) Nerd Font Complete.ttf)
 polybar|notice:  Termination signal received, shutting down...
+polybar|notice:  Parsing config file: /home/dukercs/.config/polybar/hack1bar/config.ini
+polybar|notice:  Loaded font "TerminessTTF Nerd Font:pixelsize=10" (name=TerminessTTF Nerd Font, offset=3, file=/home/dukercs/.local/share/fonts/Terminess (TTF) Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "TerminessTTF Nerd Font:pixelsize=12" (name=TerminessTTF Nerd Font, offset=4, file=/home/dukercs/.local/share/fonts/Terminess (TTF) Nerd Font Complete.ttf)
 polybar|notice:  Termination signal received, shutting down...
-polybar|notice:  Parsing config file: /home/dukercs/.config/polybar/colorblocksMOD/config.ini
-polybar|notice:  Parsing config file: /home/dukercs/.config/polybar/colorblocksMOD/config.ini
-polybar|notice:  pulseaudio: using default sink alsa_output.pci-0000_09_00.4.analog-stereo
-polybar|notice:  Loaded font "Iosevka Nerd Font:pixelsize=10" (name=Iosevka, offset=4, file=/home/dukercs/.local/share/fonts/Iosevka Nerd Font Complete.ttf)
-polybar|notice:  Loaded font "Iosevka Nerd Font:pixelsize=10" (name=Iosevka, offset=4, file=/home/dukercs/.local/share/fonts/Iosevka Nerd Font Complete.ttf)
-polybar|notice:  Loaded font "Iosevka Nerd Font:pixelsize=13" (name=Iosevka, offset=4, file=/home/dukercs/.local/share/fonts/Iosevka Nerd Font Complete.ttf)
-polybar|notice:  Loaded font "Iosevka Nerd Font:pixelsize=13" (name=Iosevka, offset=4, file=/home/dukercs/.local/share/fonts/Iosevka Nerd Font Complete.ttf)
-polybar|error: tray: Failed to put tray above 0x6800001 in the stack (XCB_MATCH (8))
-polybar|warn:  Systray selection already managed (window=0x7800001)
-polybar|error: The 'systray' module does not support the 'hook' action.
-polybar|error: Could not forward action to module: No module named 'systray' (action: 'hook', data: '1')
-polybar|error: The 'systray' module does not support the 'hook' action.
-polybar|error: Could not forward action to module: No module named 'systray' (action: 'hook', data: '0')
-polybar|error: Could not forward action to module: No module named 'systray' (action: 'hook', data: '1')
-polybar|error: The 'systray' module does not support the 'hook' action.
-polybar|error: The 'systray' module does not support the 'hook' action.
-polybar|error: Could not forward action to module: No module named 'systray' (action: 'hook', data: '0')
-polybar|error: The 'systray' module does not support the 'hook' action.
-polybar|error: Could not forward action to module: No module named 'systray' (action: 'hook', data: '1')
-polybar|error: The 'systray' module does not support the 'hook' action.
-polybar|error: Could not forward action to module: No module named 'systray' (action: 'hook', data: '0')
-polybar|error: The 'systray' module does not support the 'hook' action.
-polybar|error: Could not forward action to module: No module named 'systray' (action: 'hook', data: '1')
+polybar|notice:  Parsing config file: /home/dukercs/.config/polybar/hack1bar/config.ini
+polybar|notice:  Loaded font "TerminessTTF Nerd Font:pixelsize=10" (name=TerminessTTF Nerd Font, offset=3, file=/home/dukercs/.local/share/fonts/Terminess (TTF) Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "TerminessTTF Nerd Font:pixelsize=12" (name=TerminessTTF Nerd Font, offset=4, file=/home/dukercs/.local/share/fonts/Terminess (TTF) Nerd Font Complete.ttf)
+polybar|notice:  Termination signal received, shutting down...
+polybar|notice:  Parsing config file: /home/dukercs/.config/polybar/hack1bar/config.ini
+polybar|notice:  Loaded font "TerminessTTF Nerd Font:pixelsize=10" (name=TerminessTTF Nerd Font, offset=3, file=/home/dukercs/.local/share/fonts/Terminess (TTF) Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "TerminessTTF Nerd Font:pixelsize=12" (name=TerminessTTF Nerd Font, offset=4, file=/home/dukercs/.local/share/fonts/Terminess (TTF) Nerd Font Complete.ttf)
